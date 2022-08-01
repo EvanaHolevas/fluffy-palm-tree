@@ -13,7 +13,7 @@
         <script src="./scripts/look-at.js"></script>
     </head>
     <body>
-        <a-scene button-controls>
+        <a-scene button-controls="debug: true;">
             <a-assets>
                 <a-asset-item id="cell" src="./assets/VRplant_cell.glb"></a-asset-item>
                 <a-asset-item id="teleport" src="./assets/teleport1.glb"></a-asset-item>
@@ -21,7 +21,15 @@
 
             <!-- Camera -->
             <a-entity position="0 1.6 0" id="pov">
-                <a-camera id="firstPerson" camera="active: true; spectator: false;" look-controls="pointerLockEnabled:true" movement-controls="controls: checkpoint;" checkpoint-controls="mode: teleport" wasd-controls="enabled: true;" position="0 1.6 0">
+                <a-camera 
+                    id="firstPerson" 
+                    camera="active: true; spectator: false;" 
+                    look-controls="pointerLockEnabled:true" 
+                    movement-controls="controls: checkpoint;" 
+                    checkpoint-controls="mode: teleport" 
+                    wasd-controls="enabled: true;" 
+                    position="0 1.6 0"
+                >
                     <a-cursor></a-cursor>
                 </a-camera>
             </a-entity>
